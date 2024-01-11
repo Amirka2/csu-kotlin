@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">csu-kotlin</string>
+    <string name="app_name">calculator</string>
+    <string name="hint">Введите выражение</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">3</string>
+    <string name="five">4</string>
+    <string name="six">5</string>
+    <string name="seven">6</string>
+    <string name="eight">7</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+    <string name="equality">=</string>
+    <string name="clear_text">Очистить</string>
 </resources>
