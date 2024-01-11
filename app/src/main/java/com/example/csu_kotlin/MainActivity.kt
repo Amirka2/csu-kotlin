@@ -108,7 +108,9 @@ class MainActivity : ComponentActivity(), View.OnClickListener {
             Operations.Delete -> deleteNumber()
             Operations.Equals -> {
                 symbol = view.text.toString().dropLast(view.text.length - 1)
-                getAnswer(view.text.toString().drop(1), findMap(operationsMap, symbol))
+                val number = view.text.toString().drop(1)
+
+                getAnswer(number, findMap(operationsMap, symbol))
             }
 
             Operations.Clear -> clear()
@@ -127,7 +129,11 @@ class MainActivity : ComponentActivity(), View.OnClickListener {
             Operations.Plus -> view.text = (firstNumber + number.toInt()).toString()
             Operations.Minus -> view.text = (firstNumber - number.toInt()).toString()
             Operations.Multiply -> view.text = (firstNumber * number.toInt()).toString()
-            Operations.Divide -> view.text = (firstNumber / number.toInt()).toString()
+            Operations.Divide -> {
+                if (number.toInt() != 0) {
+                    view.text = (firstNumber / number.toInt()).toString()
+                }
+            }
 
             else -> {
                 return
